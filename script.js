@@ -1,76 +1,5 @@
+
 var startTime;
-var elapsedTime = 0;
-var timerInterval;
-var lapTimes = [];
-
-function start() {
-  startTime = Date.now() - elapsedTime;
-  timerInterval = setInterval(updateTime, 10);
-}
-
-function stop() {
-    try {
-      clearInterval(timerInterval);
-    } catch (error) {
-      console.error("Error stopping the timer:", error);
-    }
-  }
-  
-
-function reset() {
-  clearInterval(timerInterval);
-  elapsedTime = 0;
-  updateDisplay();
- 
-}
-
-function lap() {
-  var lapTime = elapsedTime;
-  lapTimes.push(lapTime);
-  var lapItem = document.createElement("li");
-  lapItem.textContent = formatTime(lapTime);
-  document.getElementById("lapTimes").appendChild(lapItem);
-}
-function resetlap() {
-    lapTimes = [];
-    document.getElementById("lapTimes").innerHTML = "";
-}
-
-  function updateDisplay() {
-    var seconds = Math.floor(elapsedTime / 1000) % 60;
-    var minutes = Math.floor(elapsedTime / (1000 * 60)) % 60;
-    var hours = Math.floor(elapsedTime / (1000 * 60 * 60));
-
-    var timeString =
-      (hours < 10 ? "0" + hours : hours) +
-      ":" +
-      (minutes < 10 ? "0" + minutes : minutes) +
-      ":" +
-      (seconds < 10 ? "0" + seconds : seconds);
-
-    document.getElementById("time").textContent = timeString;
-  }
-
-  function updateTime() {
-    var currentTime = Date.now();
-    elapsedTime = currentTime - startTime;
-    updateDisplay();
-  }
-  function formatTime(time) {
-    var seconds = Math.floor(time / 1000) % 60;
-    var minutes = Math.floor(time / (1000 * 60)) % 60;
-    var hours = Math.floor(time / (1000 * 60 * 60));
-
-    var timeString =
-      (hours < 10 ? "0" + hours : hours) +
-      ":" +
-      (minutes < 10 ? "0" + minutes : minutes) +
-      ":" +
-      (seconds < 10 ? "0" + seconds : seconds);
-
-    return timeString;
-  }
-/*var startTime;
 var elapsedTime = 0;
 var timerInterval;
 var lapTimes = [];
@@ -145,4 +74,3 @@ function displayLap(lapTime) {
 function clearLapDisplay() {
   document.getElementById("lapTimes").innerHTML = "";
 }
-*/
