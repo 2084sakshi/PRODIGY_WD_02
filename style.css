@@ -1,0 +1,53 @@
+body {
+    background-image: url(bkimg.webp);
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+  }
+h1 {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 20px; /* Add margin to create space between heading and stopwatch */
+}
+
+.stopwatch {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+  
+  #time {
+    font-size: 2em;
+    margin: 0;
+    color: #333;
+  }
+  
+  .button button {
+   background-color: #8c52ff;
+    font-size: 1em;
+    margin: 10px;
+    padding: 8px 16px;
+    cursor: pointer;
+   
+  }
+  .button button:hover {
+    background-color: #9d80d6;
+    color: #fff;
+  }
+  #lapTimes {
+    list-style: none;
+    padding: 0;
+  }
+  
+  #lapTimes li {
+    margin: 5px 0;
+    font-size: 0.8em;
+    color: #131111;
+  }
+  
