@@ -6,6 +6,8 @@ This is a simple stopwatch application created as part of an internship task.
 ## Overview
 
 The stopwatch provides basic functionality, including start, stop, reset, lap, and reset lap features. It is implemented using HTML, CSS, and JavaScript.
+![image](https://github.com/2084sakshi/PRODIGY_WD_02/assets/111236076/e26b1a38-708a-4705-ada0-35464c228763)
+
 
 ## Features
 
